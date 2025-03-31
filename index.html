@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    
+    <!-- Meta description améliorée avec mots-clés -->
+    <meta name="description" content="Service professionnel de navettes aéroport en Belgique. Réservez votre transfert vers tous les aéroports (Bruxelles, Brussels South) et gares. Transport confortable jusqu'à 8 personnes avec bagages." />
+    
+    <!-- Ajout de mots-clés (moins important qu'avant mais toujours utilisé) -->
+    <meta name="keywords" content="navette aéroport, transfert aéroport, Bruxelles, Brussels South, transport passagers, van 8 places, Zaventem, Belgique, réservation navette" />
+    
+    <!-- Contrôle des robots -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Balises canoniques pour éviter le contenu dupliqué -->
+    <link rel="canonical" href="https://navettesaeroports.be/" />
+    
+    <!-- Balises Open Graph pour les partages sur réseaux sociaux -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://navettesaeroports.be/" />
+    <meta property="og:title" content="Navettes Aéroports - Réservation en ligne" />
+    <meta property="og:description" content="Service professionnel de navettes aéroport en Belgique. Réservez votre transfert vers tous les aéroports (Bruxelles, Brussels South) et gares." />
+    <meta property="og:image" content="https://navettesaeroports.be/images/navette-aeroport-og.jpg" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Navettes Aéroports - Réservation en ligne" />
+    <meta name="twitter:description" content="Service professionnel de navettes aéroport en Belgique. Réservez votre transfert vers tous les aéroports (Bruxelles, Brussels South) et gares." />
+    <meta name="twitter:image" content="https://navettesaeroports.be/images/navette-aeroport-og.jpg" />
+    
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    
+    <!-- CSS intégré directement pour garantir les styles de base -->
+    <style>
+      :root {
+        --primary: #6b46c1;
+        --primary-dark: #5a3cad;
+        --secondary: #ed8936;
+        --neutral-dark: #f7fafc;
+      }
+      
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        color: #333;
+        background-color: #fff;
+      }
+      
+      .container-custom {
+        width: 92%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #1a202c;
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      h3 {
+        font-size: 1.5rem;
+      }
+      
+      p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      
+      /* Boutons */
+      .btn, .btn-primary, .btn-secondary, .btn-outline {
+        display: inline-block;
+        font-weight: 500;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.375rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+        text-decoration: none;
+      }
+      
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: 1px solid var(--primary);
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      
+      .btn-secondary {
+        background-color: var(--secondary);
+        color: white;
+        border: 1px solid var(--secondary);
+      }
+      
+      .btn-outline {
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        background-color: transparent;
+      }
+      
+      .btn-outline:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+      
+      /* Grilles */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      
+      @media (min-width: 768px) {
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .lg\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        
+        .lg\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      
+      /* Utilitaires */
+      .bg-white {
+        background-color: #ffffff;
+      }
+      
+      .bg-gray-50 {
+        background-color: #f9fafb;
+      }
+      
+      .bg-gray-100 {
+        background-color: #f3f4f6;
+      }
+      
+      .bg-primary {
+        background-color: var(--primary);
+      }
+      
+      .text-white {
+        color: #ffffff;
+      }
+      
+      .text-primary {
+        color: var(--primary);
+      }
+      
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      
+      .shadow-sm {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      }
+      
+      .shadow-md {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      
+      .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      
+      .text-center {
+        text-align: center;
+      }
+      
+      .p-4 {
+        padding: 1rem;
+      }
+      
+      .p-6 {
+        padding: 1.5rem;
+      }
+      
+      .p-8 {
+        padding: 2rem;
+      }
+      
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      
+      .py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      
+      .py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      
+      .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      
+      .mt-4 {
+        margin-top: 1rem;
+      }
+      
+      .mt-6 {
+        margin-top: 1.5rem;
+      }
+      
+      .mt-8 {
+        margin-top: 2rem;
+      }
+      
+      .mt-10 {
+        margin-top: 2.5rem;
+      }
+      
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .flex {
+        display: flex;
+      }
+      
+      .flex-col {
+        flex-direction: column;
+      }
+      
+      .items-center {
+        align-items: center;
+      }
+      
+      .justify-center {
+        justify-content: center;
+      }
+      
+      .justify-between {
+        justify-content: space-between;
+      }
+      
+      .space-y-2 > * + * {
+        margin-top: 0.5rem;
+      }
+      
+      .space-y-4 > * + * {
+        margin-top: 1rem;
+      }
+      
+      .space-x-4 > * + * {
+        margin-left: 1rem;
+      }
+      
+      .border {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      
+      .border-t {
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: #e5e7eb;
+      }
+      
+      .border-b {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #e5e7eb;
+      }
+      
+      .font-semibold {
+        font-weight: 600;
+      }
+      
+      .font-bold {
+        font-weight: 700;
+      }
+      
+      .text-sm {
+        font-size: 0.875rem;
+      }
+      
+      .text-lg {
+        font-size: 1.125rem;
+      }
+      
+      .text-xl {
+        font-size: 1.25rem;
+      }
+      
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+      
+      .text-3xl {
+        font-size: 1.875rem;
+      }
+      
+      .text-4xl {
+        font-size: 2.25rem;
+      }
+      
+      /* Ajouts pour les formulaires */
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      
+      .input-field {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      
+      .input-field:focus {
+        outline: 0;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.25);
+      }
+    </style>
+    
+    <!-- Importez Tailwind directement depuis CDN (Solution d'urgence) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Navettes Aéroports Belgium",
+        "image": "https://navettesaeroports.be/images/logo.png",
+        "url": "https://navettesaeroports.be",
+        "email": "navettesaeroportsbelgium@gmail.com",
+        "description": "Service de navettes aéroport en Belgique. Transport vers tous les aéroports et gares belges et frontaliers.",
+        "priceRange": "€€",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Belgique"
+        },
+        "service": {
+          "@type": "Service",
+          "name": "Transport aéroport",
+          "description": "Service de navette van 8 places vers tous les aéroports belges et frontaliers.",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "availabilityStarts": "00:00",
+            "availabilityEnds": "23:59"
+          }
+        }
+      }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6b46c1">
+    <meta name="msapplication-TileColor" content="#6b46c1">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>Navettes Aéroports - Réservation en ligne de transport vers les aéroports belges</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
