@@ -53,7 +53,7 @@ const Home = () => {
         <div className="container-custom">
           <div className="max-w-2xl mx-auto">
             <h1 className="text-4xl font-bold text-center mb-4">Navette Aéroport en Belgique | Transport 8 places</h1>
-            <p className="text-xl text-center mb-8">Service de navette privée vers Bruxelles Zaventem, Brussels South et tous les aéroports</p>
+            <p className="text-xl text-center mb-8">Service de navette vers Bruxelles Zaventem, Brussels South et tous les aéroports</p>
             <div className="bg-white rounded-lg shadow-lg p-8">
               <PriceCalculator />
             </div>
